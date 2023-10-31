@@ -1,0 +1,6 @@
+.filtered-news-stories-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    gap: 6rem;
+}

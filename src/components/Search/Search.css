@@ -1,0 +1,9 @@
+.search-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.input-field {
+    margin: 1em;
+}
