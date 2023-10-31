@@ -20,8 +20,7 @@ function SearchResults({ searchResults, searchInput }) {
 
   return (
     <div className="filtered-news">
-      <h1 className='filtered-news-header'>Search Results:</h1>
-      <h2 className='filter'>filter: {searchInput}</h2>
+      <h1 className='filtered-news-header'>Search Results: '{searchInput}'</h1>
       <div className="filtered-news-stories-wrapper">
         {newsToRender}
       </div>

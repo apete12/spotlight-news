@@ -22,6 +22,12 @@ function Search({ setSearchInput, setSearchResults, allNews }) {
     setSearchResults(filteredNews);
   }
 
+  function clearSearch() {
+    setSearchValue('');
+    setSearchResults([]);
+    setSearchValue('');
+
+  }
   
 
   return (
@@ -36,6 +42,7 @@ function Search({ setSearchInput, setSearchResults, allNews }) {
         onChange={handleChange}
       />
       <button onClick={handleClick}>Search</button>
+      <button onClick={clearSearch}>Clear Search Results</button>
     </section>
   )
 }
