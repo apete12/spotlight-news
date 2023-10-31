@@ -5,7 +5,14 @@ import returnIcon from '../../assets/return.png'
 
 
 const SingleStory = ({ singleStory, allNews }) => {
-  const singleStoryDetails = allNews.find(story => story.title == singleStory)
+
+    const singleStoryDetails = allNews.find(story => story.title == singleStory);
+
+    const publishedDate = new Date(singleStoryDetails.publishedAt);
+    const formattedDate = `${publishedDate.toLocaleString('en-US', { month: 'long' })} ${publishedDate.getDate()}, ${publishedDate.getFullYear()} ${publishedDate.toLocaleTimeString()} UTC`;
+    
+    singleStoryDetails.publishedAt = formattedDate;
+    
 
   return (
     singleStory && (
@@ -20,7 +27,7 @@ const SingleStory = ({ singleStory, allNews }) => {
           <div className='details-container'>
             <h2>{singleStoryDetails.title}</h2>
             <h3>{singleStoryDetails.description}</h3>
-            <h3>{singleStoryDetails.publishedAt}</h3>
+            <h3>Article Published: {singleStoryDetails.publishedAt}</h3>
             <a
               href={singleStoryDetails.url}
               target='_blank'
