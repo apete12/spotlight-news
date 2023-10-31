@@ -1,0 +1,8 @@
+header {
+    background: black;
+    padding: 2em;
+}
+
+header h1 {
+    color: white;
+}
