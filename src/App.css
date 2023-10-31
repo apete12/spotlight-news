@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background: url("../src/assets/newsPaper.png"); 
 }
 
 .App-logo {

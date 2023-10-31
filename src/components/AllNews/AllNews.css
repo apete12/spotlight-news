@@ -1,3 +1,10 @@
+.all-news {
+    display: flex;
+    flex-direction: column;
+    background: url("../../assets/newsPaper.png"); 
+    height: 100%;
+}
+
 .all-news-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -5,5 +12,7 @@
 }
 
 .all-news-header {
-    padding-left: 1em;
-}
+    display: flex;
+    justify-content: flex-start;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.756);}

@@ -19,7 +19,7 @@ function SearchResults({ searchResults, searchInput }) {
   });
 
   return (
-    <div className="filtered-news">
+    <div className="filtered-news-page">
       <h1 className='filtered-news-header'>Search Results: '{searchInput}'</h1>
       <div className="filtered-news-stories-wrapper">
         {newsToRender}
