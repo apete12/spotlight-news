@@ -1,7 +1,7 @@
 import './AllNews.css';
 import NewsCard from '../NewsCard/NewsCard';
 
-function AllNews({allNews}) {
+function AllNews({allNews, setSingleStory}) {
 
     const newsToRender = allNews.map(story => {
         return (
@@ -12,6 +12,7 @@ function AllNews({allNews}) {
             author={story.author}
             image={story.urlToImage}
             date={story.publishedAt}
+            setSingleStory={setSingleStory}
           />
         )
       })

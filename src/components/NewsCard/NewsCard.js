@@ -1,7 +1,12 @@
 import './NewsCard.css'
+import { Link } from 'react-router-dom'
 
 const NewsCard = props => {
   return (
+    <Link
+      to={`/${props.title}`}
+      onClick={() => props.setSingleStory(props.title)}
+    >
     <div className='news-card-wrapper'>
       <div className='news-card' key={props.id}>
         <div className='image-container'>
@@ -13,6 +18,7 @@ const NewsCard = props => {
         </div>
       </div>
     </div>
+  </Link>
   )
 }
 
