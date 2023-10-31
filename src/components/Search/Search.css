@@ -7,3 +7,8 @@
 .input-field {
     margin: 1em;
 }
+
+.submit-search, 
+.clear-search {
+    margin: .5em;
+}

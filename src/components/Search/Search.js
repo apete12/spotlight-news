@@ -41,8 +41,8 @@ function Search({ setSearchInput, setSearchResults, allNews }) {
         value={searchValue}
         onChange={handleChange}
       />
-      <button onClick={handleClick}>Search</button>
-      <button onClick={clearSearch}>Clear Search Results</button>
+      <button className='submit-search' onClick={handleClick}>Search</button>
+      <button className='clear-search' onClick={clearSearch}>Clear Search Results</button>
     </section>
   )
 }
