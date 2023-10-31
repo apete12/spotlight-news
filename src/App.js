@@ -9,6 +9,9 @@ import Header from './components/Header/Header';
 import SearchResults from './components/SearchResults/SearchResults';
 import AllNews from './components/AllNews/AllNews';
 import SingleStory from './components/SingleStory/SingleStory';
+import Loading from './components/Loading/Loading'
+import UrlError from './components/UrlError/UrlError'
+import Error from './components/Error/Error'
 
 import './App.css';
 
@@ -30,7 +33,6 @@ function App() {
         let filteredStories = removeNull(data.articles)
 
         setAllNews(filteredStories)
-        console.log(allNews)
 
       } catch (error) {
         setError(`${error.message}`);
@@ -45,14 +47,17 @@ function App() {
   return allNews && (
     <div>
       <Header setSearchInput={setSearchInput} setSearchResults={setSearchResults} allNews={allNews}/>
+      {isLoading && <Loading />}
       <Routes>
       {searchResults.length > 0 ? (
-         <Route path="/" element={<SearchResults searchResults={searchResults} searchInput={searchInput} setSingleStory={setSingleStory}/>}/>
+         <Route path="/" element={!isLoading && !error &&  <SearchResults searchResults={searchResults} searchInput={searchInput} setSingleStory={setSingleStory}/>}/>
       ) : (
-        <Route path="/" element={<AllNews allNews={allNews} searchInput={searchInput} setSingleStory={setSingleStory}/>}/> 
+        <Route path="/" element={!isLoading && !error && <AllNews allNews={allNews} searchInput={searchInput} setSingleStory={setSingleStory}/>}/> 
       )}
-        <Route path="/:title" element={<SingleStory singleStory={singleStory} allNews={allNews}/>}/> 
+        <Route path="/:title" element={!isLoading && !error && <SingleStory singleStory={singleStory} allNews={allNews}/>}/> 
+        <Route path='*' element={<UrlError/>}/>
       </Routes>
+      {error && <Error error={error} />}
     </div>
   );
 }

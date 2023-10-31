@@ -1,0 +1,6 @@
+.error-container{
+    display: flex;
+    justify-content: center;
+    background: url("../../assets/newsPaper.png"); 
+    height: 100vh;
+}
