@@ -2,6 +2,7 @@ import './NewsCard.css'
 import { Link } from 'react-router-dom'
 
 const NewsCard = props => {
+    
   return (
     <Link
       to={`/${props.title}`}
