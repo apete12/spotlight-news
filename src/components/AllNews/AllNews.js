@@ -17,10 +17,13 @@ function AllNews({allNews}) {
       })
   
   return (
-    <div className="all-news-wrapper">
+    <div className="all-news">
         <h1 className='all-news-header'>All News Stories</h1>
+      <div className="all-news-wrapper">
         {newsToRender}
+     </div>
     </div>
+
   )
 }
 
