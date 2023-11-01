@@ -1,0 +1,43 @@
+{
+    "articles": [
+        {
+            "source": {
+                "id": null,
+                "name": "CNBC"
+            },
+            "author": "Rebecca Picciotto, Natasha Turak, Amanda Macias, Joanna Tan",
+            "title": "Israel-Hamas war live updates: Thousands break into UN warehouses in Gaza; satellite images show destruction in Gaza - CNBC",
+            "description": "Israel has pledged to keep up with its \"large scale, significant strikes\" in the besieged Gaza Strip.",
+            "url": "https://www.cnbc.com/2023/10/29/israel-hamas-war-live-updates-latest-news-on-gaza-conflict.html",
+            "urlToImage": "https://image.cnbcfm.com/api/v1/image/107324908-1698496957322-gettyimages-1749224815-AFP_33Z84FN.jpeg?v=1698508953&w=1920&h=1080",
+            "publishedAt": "2023-10-30T00:21:00Z",
+            "content": "The World Health Organization and the Red Cross reiterated on Sunday that hospitals are protected under international humanitarian law and should not be targets of attack in the Israel-Hamas war, fol… [+1237 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "YouTube"
+            },
+            "author": null,
+            "title": "Cincinnati Bengals vs. San Francisco 49ers | 2023 Week 8 Game Highlights - NFL",
+            "description": "Check out our other channels:NFL Mundo https://www.youtube.com/mundonflNFL Brasil https://www.youtube.com/c/NFLBrasilOficialNFL UK https://www.youtube.com/ch...",
+            "url": "https://www.youtube.com/watch?v=lpCusbU66cM",
+            "urlToImage": "https://i.ytimg.com/vi/lpCusbU66cM/maxresdefault.jpg",
+            "publishedAt": "2023-10-30T00:02:33Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": "reuters",
+                "name": "Reuters"
+            },
+            "author": "Reuters",
+            "title": "Russian security forces remove pro-Palestinian protesters from Dagestan airport - Reuters",
+            "description": "Hundreds of anti-Israel protesters on Sunday stormed Russia's Dagestan airport in Makhachkala where a plane from Israel had just arrived, forcing Russian security forces to close the airport and divert flights while removing the demonstrators.",
+            "url": "https://www.reuters.com/world/europe/airport-closed-southern-russia-after-people-pour-onto-runway-russian-aviation-2023-10-29/",
+            "urlToImage": "https://www.reuters.com/resizer/ImO4vHDar7LJ39_yNriNhsqgchk=/1200x628/smart/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/NQW45QZSOZK3HAWM75V3VTKYAA.jpg",
+            "publishedAt": "2023-10-29T23:44:00Z",
+            "content": "Oct 29 (Reuters) - Hundreds of anti-Israel protesters on Sunday stormed Russia's Dagestan airport in Makhachkala where a plane from Israel had just arrived, forcing Russian security forces to close t… [+2663 chars]"
+        }
+    ]
+}

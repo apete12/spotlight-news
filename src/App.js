@@ -31,7 +31,7 @@ function App() {
       try {
         const data = await fetchStories()
         let filteredStories = removeNull(data.articles)
-
+        // setAllNews(dummyData.articles)
         setAllNews(filteredStories)
 
       } catch (error) {
