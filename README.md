@@ -6,7 +6,7 @@
 </div>
 
 ## 📝 Description
-
+News Spotlight uses the News API to display the top headlines across all news outlets. News Spotlight offers a search feature that allows users to search key words across the top news articles. A user can also select a news story to find additional details about that story, which includes a link to the full article on the outlet's website.  
 
 ## 💻 Technologies Used
   
