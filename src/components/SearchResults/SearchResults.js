@@ -21,9 +21,16 @@ function SearchResults({ searchResults, searchInput }) {
   return (
     <div className="filtered-news-page">
       <h1 className='filtered-news-header'>Search Results: '{searchInput}'</h1>
-      <div className="filtered-news-stories-wrapper">
-        {newsToRender}
-      </div>
+      {searchResults.length > 0 ? (
+        <div className="filtered-news-stories-wrapper">
+          {newsToRender}
+        </div>
+      ) : (
+        <div className="no-results-container">
+          <h2 className='no-results'>No stories match your search.</h2>
+        </div>
+
+      )}
     </div>
   );
 }

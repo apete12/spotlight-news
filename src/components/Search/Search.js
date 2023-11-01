@@ -1,23 +1,24 @@
 import './Search.css'
 import { useState } from 'react'
 
-function Search({ setSearchInput, setSearchResults, allNews }) {
+function Search({ setSearchInput, setSearchResults, allNews, setSearchActive}) {
   const [searchValue, setSearchValue] = useState('');
-
-  console.log(allNews)
-
+console.log(setSearchActive)
   function handleChange(e) {
     setSearchValue(e.target.value);
   }
 
   function handleClick() {
+    setSearchActive(true)
     setSearchInput(searchValue);
   
     const filteredNews = allNews.filter(story => {
       const titleIncludesInput = story.title && story.title.toLowerCase().includes(searchValue.toLowerCase());
       const descriptionIncludesInput = story.description && story.description.toLowerCase().includes(searchValue.toLowerCase());
       return titleIncludesInput || descriptionIncludesInput;
+      
     });
+    console.log(filteredNews)
   
     setSearchResults(filteredNews);
   }
@@ -26,7 +27,7 @@ function Search({ setSearchInput, setSearchResults, allNews }) {
     setSearchValue('');
     setSearchResults([]);
     setSearchValue('');
-
+    setSearchActive(false)
   }
   
 

@@ -19,6 +19,7 @@ function App() {
   const [allNews, setAllNews] = useState([])
   const [searchResults, setSearchResults] = useState([])
   const [searchInput, setSearchInput] = useState('')
+  const [searchActive, setSearchActive] = useState(false)
   const [singleStory, setSingleStory] = useState('')
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState('')
@@ -29,10 +30,10 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await fetchStories()
-        let filteredStories = removeNull(data.articles)
-        // setAllNews(dummyData.articles)
-        setAllNews(filteredStories)
+        // const data = await fetchStories()
+        // let filteredStories = removeNull(data.articles)
+        setAllNews(dummyData.articles)
+        // setAllNews(filteredStories)
 
       } catch (error) {
         setError(`${error.message}`);
@@ -46,11 +47,11 @@ function App() {
 
   return allNews && (
     <div>
-      <Header setSearchInput={setSearchInput} setSearchResults={setSearchResults} allNews={allNews}/>
+      <Header setSearchInput={setSearchInput} setSearchResults={setSearchResults} setSearchActive={setSearchActive} allNews={allNews}/>
       {isLoading && <Loading />}
       <Routes>
-      {searchResults.length > 0 ? (
-         <Route path="/" element={!isLoading && !error &&  <SearchResults searchResults={searchResults} searchInput={searchInput} setSingleStory={setSingleStory}/>}/>
+      {searchActive === true ? (
+         <Route path="/" element={!isLoading && !error &&  <SearchResults searchResults={searchResults} searchInput={searchInput} setSingleStory={setSingleStory} setSearchActive={setSearchActive}/>}/>
       ) : (
         <Route path="/" element={!isLoading && !error && <AllNews allNews={allNews} searchInput={searchInput} setSingleStory={setSingleStory}/>}/> 
       )}
