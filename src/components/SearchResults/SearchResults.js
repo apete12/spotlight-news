@@ -1,10 +1,15 @@
 import './SearchResults.css';
 import NewsCard from '../NewsCard/NewsCard';
 
-function SearchResults({ searchResults, searchInput }) {
+function SearchResults({ searchResults, searchInput, setSingleStory }) {
   console.log(searchResults)
 
   const newsToRender = searchResults.map(story => {
+    const publishedDate = new Date(story.publishedAt);
+    const formattedDate = `${publishedDate.toLocaleString('en-US', { month: 'long' })} ${publishedDate.getDate()}, ${publishedDate.getFullYear()} ${publishedDate.toLocaleTimeString()} UTC`;
+  
+    story.publishedAt = formattedDate;
+
     return (
       <NewsCard
         key={story.id}
@@ -14,6 +19,7 @@ function SearchResults({ searchResults, searchInput }) {
         author={story.author}
         image={story.urlToImage}
         date={story.publishedAt}
+        setSingleStory={setSingleStory}
       />
     );
   });
