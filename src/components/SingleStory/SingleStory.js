@@ -30,11 +30,10 @@ const SingleStory = ({ singleStory, allNews }) => {
             <h3>Article Published: {singleStoryDetails.publishedAt}</h3>
             <a
               href={singleStoryDetails.url}
-              target='_blank'
-              rel='noopener noreferrer'
+              target='_self'
             >
               Link to Full Article
-              <span class="ext"><span class="element-invisible">(link goes to external website)</span><img viewbox="0 0 20 20" width="15" aria-hidden="true" focusable="false" src={externalLink} alt="" className='external-icon'/> </span>
+              <span class="ext"><span class="element-invisible">(link opens external website in new tab)</span><img viewbox="0 0 20 20" width="15" aria-hidden="true" focusable="false" src={externalLink} alt="" className='external-icon'/> </span>
             </a>
           </div>
         </div>
