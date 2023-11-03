@@ -6,7 +6,7 @@
 </div>
 
 ## 📝 Description
-
+News Spotlight uses the News API to display the top headlines across all news outlets. News Spotlight offers a search feature that allows users to search key words across the top news articles. A user can also select a news story to find additional details about that story, which includes a link to the full article on the outlet's website.  
 
 ## 💻 Technologies Used
   
@@ -40,9 +40,9 @@ npm start
   
   | Description | Screenshot |
   |------------ | -----------|
-  | <h3 align="center">Home Page - All News | ![all-pets-view](https://github.com/aliceabarca/petbook-be/assets/104571445/c4e4da38-d5ea-4e0a-8352-823ecc40d24f)
-  | <h3 align="center">Single Story Details | ![single-pet-details](https://github.com/aliceabarca/petbook-be/assets/104571445/d6be5802-0530-475b-aa42-7e852a45dcf9)
-   | <h3 align="center">Search the News | ![single-pet-details](https://github.com/aliceabarca/petbook-be/assets/104571445/ce65bad5-c577-4255-8f93-709848801054)
+  | <h3 align="center">Home Page - All News | <img width="1422" alt="Screenshot 2023-11-01 at 9 49 17 AM" src="https://github.com/apete12/accessible-adventures/assets/104571445/5aee75ce-34f1-46e9-8ab8-9378f304433d"> 
+  | <h3 align="center">Single Story Details | <img width="1416" alt="Screenshot 2023-11-01 at 10 04 38 AM" src="https://github.com/apete12/accessible-adventures/assets/104571445/6ad99140-c09f-4a70-81cf-fac230d9430f">
+   | <h3 align="center">Search the News | <img width="1419" alt="Screenshot 2023-11-01 at 9 49 28 AM" src="https://github.com/apete12/accessible-adventures/assets/104571445/deb7193d-b1bf-4ab7-9713-2d4949e71370">)
 
 
 </details>
