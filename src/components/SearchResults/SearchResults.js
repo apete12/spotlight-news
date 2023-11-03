@@ -26,7 +26,7 @@ function SearchResults({ searchResults, searchInput, setSingleStory }) {
 
   return (
     <div className="filtered-news-page">
-      <h1 className='filtered-news-header'>Search Results: '{searchInput}'</h1>
+      <h1 className='filtered-news-header'>Search Results: "{searchInput}"</h1>
       {searchResults.length > 0 ? (
         <div className="filtered-news-stories-wrapper">
           {newsToRender}

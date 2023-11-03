@@ -17,9 +17,7 @@ console.log(setSearchActive)
       const descriptionIncludesInput = story.description && story.description.toLowerCase().includes(searchValue.toLowerCase());
       return titleIncludesInput || descriptionIncludesInput;
       
-    });
-    console.log(filteredNews)
-  
+    });  
     setSearchResults(filteredNews);
   }
 
@@ -37,6 +35,7 @@ console.log(setSearchActive)
       <input 
         id='search'
         className='input-field'
+        name='search'
         type='text' 
         placeholder='Search..'
         value={searchValue}

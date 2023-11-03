@@ -30,10 +30,10 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // const data = await fetchStories()
-        // let filteredStories = removeNull(data.articles)
-        setAllNews(dummyData.articles)
-        // setAllNews(filteredStories)
+        const data = await fetchStories()
+        let filteredStories = removeNull(data.articles)
+        // setAllNews(dummyData.articles)
+        setAllNews(filteredStories)
 
       } catch (error) {
         setError(`${error.message}`);
@@ -53,7 +53,7 @@ function App() {
       {searchActive === true ? (
          <Route path="/" element={!isLoading && !error &&  <SearchResults searchResults={searchResults} searchInput={searchInput} setSingleStory={setSingleStory} setSearchActive={setSearchActive}/>}/>
       ) : (
-        <Route path="/" element={!isLoading && !error && <AllNews allNews={allNews} searchInput={searchInput} setSingleStory={setSingleStory}/>}/> 
+        <Route path="/" element={!isLoading && !error && <AllNews allNews={allNews} setSingleStory={setSingleStory}/>}/> 
       )}
         <Route path="/:title" element={!isLoading && !error && <SingleStory singleStory={singleStory} allNews={allNews}/>}/> 
         <Route path='*' element={<UrlError/>}/>
